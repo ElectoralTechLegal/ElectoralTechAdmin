@@ -22,8 +22,7 @@ export default {
         }
     }
 }
-/**
- *
+/***
  * const fecha = new Date();
     fecha.setMilliseconds = 1617074071422 * 1000;
  */
