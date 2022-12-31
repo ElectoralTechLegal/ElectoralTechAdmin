@@ -58,7 +58,7 @@
                   ></v-select>
 
                   <v-text-field
-                      label="Fecha de Publicacion"
+                      label="Fecha de Publicación"
                       prepend-icon="mdi-form-textarea"
                       v-model="fechaRegis"
                       clearable
@@ -443,7 +443,7 @@ export default {
     async obtenerPosts() {
       try {
         this.setLoading(true);
-        const snapshot = await fr.collection("blog").orderBy("fechaRegistro").get();
+        const snapshot = await fr.collection("blog").orderBy("fechaRegistro","desc").get();
         if (!snapshot.empty) {
           let temp = [];
           snapshot.forEach((doc) => {
@@ -570,8 +570,11 @@ export default {
 
           if(this.fechaRegis != ""){
             var date = new Date(this.fechaRegis)
-            fechaAGuardar = date.getTime();
+            
+            fechaAGuardar = date.getTime()+86400000;
+            //console.log("Seeeee",date,"XXXXXX",this.fechaRegis,"final",fechaAGuardar);
           }else{
+            //console.log("HHHHHHHHHHHHHHHH",this.fechaRegis,"hththt",fn.fechaFormato(this.fechaRegis));
             fechaAGuardar = Date.now();
           }
 
