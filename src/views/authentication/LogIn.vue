@@ -12,7 +12,7 @@
             <v-card>
               <v-list-item three-line class="logInHeader">
                 <v-list-item-content>
-                  <div class="overline mb-4 white--text">Identificate</div>
+                  <div class="overline mb-4 white--text">Identifícate</div>
                   <v-list-item-title class="headline mb-1 white--text"
                     >Panel administrativo</v-list-item-title
                   >

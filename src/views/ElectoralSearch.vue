@@ -21,7 +21,7 @@
             ACUERDOS
           </v-tab>
           <v-tab href="#tab-2" @click="Documento='expediente',limpiarForm()">
-            EXPEDIENTES
+            SENTENCIAS
           </v-tab>
         </v-tabs>
 

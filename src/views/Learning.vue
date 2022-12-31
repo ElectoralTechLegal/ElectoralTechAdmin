@@ -184,8 +184,8 @@ export default {
       search: "",
       filterSelected: 0,
       filters: [
-        {value: 1, text: "Abogado Artificial"},
-        {value: 2, text: "Boletin Semanal"},
+        {value: 1, text: "Boletín LegalTech"},
+        {value: 2, text: "Boletín Electoral"},
         {value: 3, text: "Conferencia"},
         {value: 3, text: "Otros"},
       ],
