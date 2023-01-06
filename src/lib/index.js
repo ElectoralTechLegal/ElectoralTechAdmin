@@ -1,6 +1,7 @@
 export default {
     fechaFormato(miliseconds) {
         if (miliseconds) {
+            /*
             const fecha = new Date(miliseconds);
             // fecha.setMilliseconds(miliseconds);
             // se agrega el 0 al mes  para que la fecha tenga un formato parejo de 2 digitos
@@ -18,7 +19,11 @@ export default {
                 dia = fecha.getDate();
             }
 
-            return dia + "/" + mes + "/" + fecha.getFullYear();
+            return dia + "/" + mes + "/" + fecha.getFullYear();*/
+            const date = new Date(miliseconds);
+            var fecha = date.toLocaleDateString('en-GB');
+            //console.log(fecha);
+            return fecha
         }
     }
 }

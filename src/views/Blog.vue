@@ -219,19 +219,19 @@
         <v-row>
           <v-col>
             <div class="text-lg-h6 text-md-h6 text-xs-h6 text-center">Posts publicados</div>  
-            <v-row>
-              <v-col cols="12">
-                <v-text-field
-                  v-model="search"
-                  append-icon="mdi-magnify"
-                  label="Búsqueda en publicaciones..."
-                  single-line
-                  color="accent"
-                  filled
-                ></v-text-field>
+              <v-row>
+                <v-col cols="12">
+                  <v-text-field
+                    v-model="search"
+                    append-icon="mdi-magnify"
+                    label="Búsqueda en post publicados..."
+                    single-line
+                    color="accent"
+                    filled
+                  ></v-text-field>
                 
-              </v-col>
-            </v-row>
+                </v-col>
+              </v-row>
               <v-data-table
                 class="elevation-1"
                 :headers="headers"
@@ -244,21 +244,21 @@
                   v-model="item.estatus"
                   @click="change(item)"
                   color="primary"
-                ></v-switch>
+                  ></v-switch>
               </template>
 
               <template v-slot:[`item.actions`]="{ item }">
-                <v-icon @click="verIMG(item)" color="primary">
-                  mdi-image-outline
-                </v-icon>
+                    <v-icon @click="verIMG(item)" color="primary">
+                    mdi-image-outline
+                    </v-icon>
 
-                <!-- <v-icon @click="verPDF(item)" color="primary">
+                  <!-- <v-icon @click="verPDF(item)" color="primary">
                   mdi-file-pdf-box
-                </v-icon> -->
+                  </v-icon> -->
 
-                <v-icon @click="addPDFtoList(item)" color="green" v-if="item.blogListaCheck"> mdi-file-plus </v-icon>
-              </template>
-            </v-data-table>
+                  <v-icon @click="addPDFtoList(item)" color="green" v-if="item.blogListaCheck"> mdi-file-plus </v-icon>
+                </template>
+              </v-data-table>
             <div class="text-lg-h6 text-md-h6 text-xs-h6 text-center">Listas de sentencias</div>  
 
             <v-data-table
@@ -268,6 +268,7 @@
                 :search="search_1"
                 :loading="loading"
               >
+              
               <template v-slot:[`item.estatus`]="{ item }">
                 <v-switch
                   v-model="item.estatus"
@@ -275,18 +276,19 @@
                   color="primary"
                 ></v-switch>
               </template>
-
+              
               <template v-slot:[`item.actions`]="{ item }">
                 <v-icon @click="verIMG(item)" color="primary">
                   mdi-image-outline
                 </v-icon>
-
-                <!-- <v-icon @click="verPDF(item)" color="primary">
+                <!--
+                 <v-icon @click="verPDF(item)" color="primary">
                   mdi-file-pdf-box
                 </v-icon> -->
 
                 <v-icon @click="addPDFtoList(item)" color="green" v-if="item.blogListaCheck"> mdi-file-plus </v-icon>
               </template>
+              
             </v-data-table>
           </v-col>
         </v-row>
@@ -413,6 +415,12 @@ export default {
         { text: "Fecha registro", align: "start", value: "fechaRegistro" },
         { text: "Acciones", align: "start", value: "actions" },
         { text: "Estatus", align: "start", value: "estatus" },
+      ],
+      headers_1: [
+        { text: "Link", align: "start", value: "id" },
+        { text: "Título", align: "start", value: "titulo" },
+        { text: "Descripción", align: "start", value: "descripcion" },
+
       ],
       data: [],
       cambioStatus: false,
