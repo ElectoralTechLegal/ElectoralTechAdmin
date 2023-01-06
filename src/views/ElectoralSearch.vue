@@ -57,7 +57,7 @@
                       </v-file-input>
 
                       <v-select
-                          label="Organo"
+                          label="Órgano"
                           prepend-icon="mdi-home-city"
                           v-model="Doc_Organo"
                           :items="organosDisponibles"
@@ -186,7 +186,7 @@
                       </v-file-input>
 
                       <v-select
-                          label="Organo"
+                          label="Órgano"
                           prepend-icon="mdi-home-city"
                           v-model="Doc_Organo"
                           :items="organosDisponibles"
